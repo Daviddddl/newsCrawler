@@ -19,6 +19,7 @@ class newsSpider(CrawlSpider):
         res_url = response.url
         print('现在进行到: '+res_url)
 
+        # 此处是将爬取下来的网页以文件保存，留作备份，可以注释掉
         with open('../crawler_files/news_webs/' + nowTime + '.html', 'w') as f:
             f.write(response.text)
 
